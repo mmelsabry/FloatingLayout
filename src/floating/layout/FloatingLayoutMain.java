@@ -1,4 +1,4 @@
-package t0mm13b.touchSoftly;
+package floating.layout;
 
 
 import android.os.Bundle;
@@ -12,7 +12,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
-public class TouchSoftlyMain extends Activity {
+public class FloatingLayoutMain extends Activity {
 
 	private Context _context;
 	private Intent _serviceIntent;
@@ -24,7 +24,7 @@ public class TouchSoftlyMain extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         _context = this.getBaseContext();
-        _serviceIntent = new Intent(_context, t0mm13b.touchSoftly.OnScreenPageHandler.class);
+        _serviceIntent = new Intent(_context, floating.layout.OnScreenPageHandler.class);
         _mainPrefs = PreferenceManager.getDefaultSharedPreferences(this);
         _blnActivatedViaStartup = _mainPrefs.getBoolean(_context.getString(R.string.keyActivatedViaBoot), false);
     }
@@ -40,7 +40,7 @@ public class TouchSoftlyMain extends Activity {
         switch (item.getItemId()) {
         case R.id.menu_settings:
             // Launch the DeviceListActivity to see devices and do scan
-            Intent intentLaunchPrefs = new Intent(_context, t0mm13b.touchSoftly.PrefTouchSoftly.class);
+            Intent intentLaunchPrefs = new Intent(_context, floating.layout.PrefFloatingLayout.class);
             startActivity(intentLaunchPrefs);
             return true;
         }

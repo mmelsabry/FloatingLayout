@@ -1,8 +1,7 @@
-package t0mm13b.touchSoftly;
+package floating.layout;
 
 import java.io.IOException;
 
-import t0mm13b.touchSoftly.R;
 import android.app.ActivityManager;
 import android.app.Instrumentation;
 import android.app.Service;

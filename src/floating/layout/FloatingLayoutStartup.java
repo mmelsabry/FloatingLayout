@@ -1,4 +1,4 @@
-package t0mm13b.touchSoftly;
+package floating.layout;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -7,7 +7,7 @@ import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 import android.preference.PreferenceManager;
 
-public class TouchSoftlyStartup extends BroadcastReceiver{
+public class FloatingLayoutStartup extends BroadcastReceiver{
 
 	@Override
 	public void onReceive(Context context, Intent intent) {
@@ -17,7 +17,7 @@ public class TouchSoftlyStartup extends BroadcastReceiver{
 			Editor e = prefs.edit();
 			e.putBoolean(context.getString(R.string.keyActivatedViaBoot), true);
 			e.commit();
-			Intent serviceIntent = new Intent(context, t0mm13b.touchSoftly.OnScreenPageHandler.class);
+			Intent serviceIntent = new Intent(context, floating.layout.OnScreenPageHandler.class);
 			context.startService(serviceIntent);
 		}else{
 			Editor e = prefs.edit();

@@ -1,4 +1,4 @@
-package t0mm13b.touchSoftly;
+package floating.layout;
 
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
@@ -10,7 +10,7 @@ import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.PreferenceActivity;
 import android.preference.PreferenceManager;
 
-public class PrefTouchSoftly extends PreferenceActivity implements OnSharedPreferenceChangeListener{
+public class PrefFloatingLayout extends PreferenceActivity implements OnSharedPreferenceChangeListener{
 
 	private SharedPreferences _prefs = null;
 	private CheckBoxPreference _chkBoxAutoStart;
